@@ -12,7 +12,7 @@ class Log{
 
     public function writeLog(String $module, String $status)
     {
-        # code...
+        $sql = '';
     }
 }
 
