@@ -1,7 +1,7 @@
 <?php
 return [
     'host' => 'localhost',
-    'name' => 'WalutoBase',
+    'name' => 'walutobase',
     'user' => 'root',
     'pass' => ''
 ];
