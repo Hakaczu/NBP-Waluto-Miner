@@ -2,15 +2,13 @@
 
 class Rate{
     public $isoCode;
+    public $codeId;
     public $bid;
     public $ask;
     public $source;
 
-    public function __construct($source, $ask, $bid, $isoCode)
+    public function __construct(String $isoCode)
     {
-        $this->source = $source;
-        $this->ask = $ask;
-        $this->bid = $bid;
         $this->isoCode = $isoCode;
     }
 }
