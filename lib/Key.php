@@ -14,7 +14,7 @@ class Key{
     }
 
     private function verification(){
-        $sql = "SELECT id FROM api_keys WHERE key = :key AND block = 0;";
+        $sql = "SELECT id FROM api_keys WHERE api_keys.key = :key AND block = 0;";
         $query = $this->conn->prepare($sql);
         $query->bindParam(':key', $this->api_key, PDO::PARAM_STR);
         $result = $query->execute();
