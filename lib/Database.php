@@ -7,7 +7,6 @@
         private $db_name = "database";
         private $username = "root";
         private $password = "";
-        public $conn;
         
         public function __construct()
         {
@@ -30,16 +29,16 @@
         // get the database connection
         public function getConnection(){
     
-            $this->conn = null;
+            //$this->conn = null;
     
             try{
-                $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-                $this->conn->exec("set names utf8");
+                $conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
+                $conn->exec("set names utf8");
             }catch(PDOException $exception){
                 http_response_code(500);
                 echo $exception;
             }
-            return $this->conn;
+            return $conn;
         }
 
     }   

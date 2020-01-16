@@ -6,8 +6,11 @@ class Rate{
     public $ask;
     public $source;
 
-    public function __construct(String $isoCode){
+    public function __construct(String $isoCode, Float $bid = null, Float $ask = null, String $source = null){
         $this->isoCode = $isoCode;
+        $this->bid = $bid;
+        $this->ask = $ask;
+        $this->source = $source;
     }
 
     public function getRate(PDO $conn){

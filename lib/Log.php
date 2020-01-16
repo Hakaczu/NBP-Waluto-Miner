@@ -12,7 +12,7 @@ class Log{
 
     public function writeLog(String $module, String $status)
     {
-        $sql = 'INSERT INTO log(sender_id, status, module) VALUES( :sender_id, :status, :module);';
+        $sql = 'INSERT INTO log(sender_id, status, module) VALUES( :sender_id , :status , :module );';
         $stmt =  $this->conn->prepare($sql);
         $stmt->bindParam(':sender_id', $this->senderId, PDO::PARAM_STR);
         $stmt->bindParam(':status', $status, PDO::PARAM_STR);
