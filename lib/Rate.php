@@ -6,14 +6,14 @@ class Rate{
     public $ask;
     public $source;
 
-    public function __construct(String $isoCode, Float $bid = null, Float $ask = null, String $source = null){
+    public function __construct($isoCode, $bid = null, $ask = null, $source = null){
         $this->isoCode = $isoCode;
         $this->bid = $bid;
         $this->ask = $ask;
         $this->source = $source;
     }
 
-    public function getRate(PDO $conn){
+    public function getRate($conn){
         $sql = 'SELECT iso_code, bid, ask, name FROM v_newest WHERE iso_code = :code LIMIT 1;';
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':code', $this->isoCode, PDO::PARAM_STR);

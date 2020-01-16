@@ -8,7 +8,7 @@ class Miner{
     private $source_url;
     private $curr_list = array();
 
-    public function __construct(PDO $conn, string $source)
+    public function __construct($conn, $source)
     {
         $this->conn = $conn;
         $this->source = strtolower($source);

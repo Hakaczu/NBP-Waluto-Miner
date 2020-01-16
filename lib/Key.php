@@ -7,7 +7,7 @@ class Key{
     public $auth = false;
 
 
-    public function __construct(String $api_key, PDO $conn){
+    public function __construct($api_key, $conn){
         $this->api_key = $api_key;
         $this->conn = $conn;
         $this->verification();

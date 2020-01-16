@@ -9,4 +9,5 @@
 
     $miner = new Miner($conn, 'nbp');
     $miner->mining();
+    http_response_code(200);
 ?>

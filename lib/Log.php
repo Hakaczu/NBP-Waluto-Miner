@@ -4,13 +4,13 @@ class Log{
     private $conn;
     private $senderId;
 
-    public function FunctionName(PDO $conn, INT $senderId)
+    public function FunctionName($conn, $senderId)
     {
         $this->conn = $conn;
         $this->senderId = $senderId;
     }
 
-    public function writeLog(String $module, String $status)
+    public function writeLog($module, $status)
     {
         $sql = 'INSERT INTO log(sender_id, status, module) VALUES( :sender_id , :status , :module );';
         $stmt =  $this->conn->prepare($sql);
