@@ -11,7 +11,7 @@ if(isset($_GET['key']) and !empty($_GET['key']) and isset($_GET['code']) and !em
 
     $key = new Key($_GET['key'], $conn);
 
-    if($key->auth){
+    if($key->auth == true){
         $log = new Log($conn, $key->sender_id);
         $rate = new Rate($_GET['code']);
         $status = $rate->getRate($conn);
@@ -28,6 +28,6 @@ if(isset($_GET['key']) and !empty($_GET['key']) and isset($_GET['code']) and !em
         http_response_code(401);
     }
 }else{
-    http_response_code(400);
+    http_response_code(403);
 }
 ?>
