@@ -1,4 +1,4 @@
-# WalutoMiner - Polish national bank currency miner
+# NBP-Waluto-Miner - Polish national bank currency miner
 
 ## ENG
 This application retrieves exchange rates from the Polish national bank and saves them to the database. With the help of endpoints it is possible to download the current exchange rate of a single currency or all currencies available in the database.
